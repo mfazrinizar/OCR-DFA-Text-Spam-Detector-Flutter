@@ -1,0 +1,25 @@
+name: ocr_dfa_text_spam_filter
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.11.1
+  google_mlkit_commons: ^0.11.0
+  google_mlkit_text_recognition: ^0.15.0
+  provider: ^6.1.5
+  image_picker: ^1.1.2
+  graphview: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
