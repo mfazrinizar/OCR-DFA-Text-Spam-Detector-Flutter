@@ -1,4 +1,4 @@
-package com.example.ocr_dfa_text_spam_filter
+package com.mfazrinizar.ocr_dfa_text_spam_detector
 
 import io.flutter.embedding.android.FlutterActivity
 

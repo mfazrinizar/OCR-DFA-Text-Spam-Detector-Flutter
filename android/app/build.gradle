@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ocr_dfa_text_spam_filter"
+    namespace = "com.mfazrinizar.ocr_dfa_text_spam_detector"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.ocr_dfa_text_spam_filter"
+        applicationId = "com.mfazrinizar.ocr_dfa_text_spam_detector"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
