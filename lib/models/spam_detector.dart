@@ -39,11 +39,24 @@ class SpamDetectorModel {
   DFAState getStartState() => dfaStart;
 
   List<DFAState> getDfaPath(String text) {
-    var path = <DFAState>[];
+    text = text.toLowerCase();
+    for (int i = 0; i < text.length; i++) {
+      var state = dfaStart;
+      List<DFAState> path = [state];
+      for (int j = i; j < text.length; j++) {
+        var ch = text[j];
+        state = state.transitions[ch] ?? dfaStart;
+        path.add(state);
+        if (state.isAccept) {
+          return path;
+        }
+      }
+    }
+
     var state = dfaStart;
-    path.add(state);
+    List<DFAState> path = [state];
     for (var ch in text.split('')) {
-      state = state.transitions[ch] ?? state;
+      state = state.transitions[ch] ?? dfaStart;
       path.add(state);
     }
     return path;
