@@ -103,7 +103,8 @@ class _OCRLiveCaptureViewState extends State<OCRLiveCaptureView> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding:
+              const EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 128),
           child: Column(
             children: [
               focusAreaControls,
@@ -131,7 +132,7 @@ class _OCRLiveCaptureViewState extends State<OCRLiveCaptureView> {
                 stream: _ocrStreamController.stream,
                 builder: (context, snapshot) {
                   final text = snapshot.data ?? '';
-                  if (_controller.text != text) {
+                  if (controller.isLiveOcrActive && _controller.text != text) {
                     WidgetsBinding.instance.addPostFrameCallback((_) {
                       if (mounted) {
                         _controller.text = text;
@@ -155,6 +156,7 @@ class _OCRLiveCaptureViewState extends State<OCRLiveCaptureView> {
                     ),
                     controller: _controller,
                     onChanged: (text) => controller.setInputText(text),
+                    enabled: true, // Always editable
                   );
                 },
               ),
