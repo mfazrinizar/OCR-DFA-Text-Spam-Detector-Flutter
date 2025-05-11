@@ -15,6 +15,7 @@ dependencies:
   image_picker: ^1.1.2
   graphview: ^1.2.0
   google_mlkit_commons: ^0.11.0
+  animated_notch_bottom_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:

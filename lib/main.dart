@@ -10,8 +10,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SpamDetectorView(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Spam Detector",
+      theme: ThemeData(useMaterial3: false),
+      home: const SpamDetectorView(),
     );
   }
 }
